@@ -23,10 +23,13 @@ std::string decrypt(std::string encrypted, std::string key) {
     return encrypt(encrypted, key);
 }
 
-
 int main(int argc, const char * argv[]) {
-    std::string message = encrypt("Teshgfhgfhgfhfhfhgfting", "THISISMYKEY");
+    std::string user_input;
+    std::cout << "PLease Enter String You Wantd To Encrypt: \n";
+    std::cin >> user_input;
+    std::string message = encrypt(user_input, "THISISMYKEY");
     std::cout << "Encrypted: " << message;
     std::cout << "\nDecrypted: " << decrypt(message, "THISISMYKEY");
+    std::cout << "ENCRYPTION \n";
     return 0;
 }
